@@ -18,7 +18,13 @@ for(const item of label) {
 }
 
 
-const navList = document.querySelector('.nav-list')
-const siteMap = document.querySelector('.site-map')
+// const navList = document.querySelector('.nav-list')
+// const siteMap = document.querySelector('.site-map')
 
-Array.from(navList.children).forEach(item => siteMap.appendChild(item))
+// Array.from(navList.children).forEach(item => siteMap.appendChild(item))
+
+const navList = document.querySelector(".nav-list");
+const navListClone = navList.cloneNode(true);
+const siteMap = document.querySelector(".site-map")
+
+Array.from(navListClone.children).forEach(item => siteMap.appendChild(item))
